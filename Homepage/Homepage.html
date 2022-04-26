@@ -140,6 +140,10 @@
       left: 5%;
     }
 
+    #top-row {
+      display: none;
+    }
+
     @media screen and (max-width: 1300px) {
       .home-nav-vid {
         width: 250px;
@@ -155,13 +159,13 @@
 
       .home-options-icon {
         height: 50px;
-        width: 70px;
+        width: 60px;
         cursor: pointer;
       }
 
       .home-options-text {
         font-family: myFirstFont;
-        font-size: 0.1em;
+        font-size: 0.8em;
         text-shadow: 1px 2px 0 rgb(82 80 80 / 50%);
         cursor: pointer;
       }
@@ -176,7 +180,7 @@
     } */
 
     /* orientation: portrait */
-    @media screen and (orientation: portrait) {
+    @media screen and (max-width: 600px) {
 
       .background-screen {
         position: absolute;
@@ -187,10 +191,11 @@
       .home-center-tab {
         width: 45vw;
         height: 57vh;
-        top: 155;
+        top: 105;
       }
 
       .home-nav-vid {
+        
         width: 150px;
         height: 13vh;
       }
@@ -212,8 +217,12 @@
         display: none;
       }
 
-      .home-options-row {
+      /* .home-options-row {
         top: 50;
+      } */
+
+      #top-row {
+        display: block;
       }
     }
 
@@ -416,18 +425,21 @@
           </div>
 
           <div class="home-nav-vid-bar" style="position: relative; width: 0; height: 0; margin-left: 85%;">
-            <div class="home-nav-vid-wrapper" style="z-index: 2px; position: absolute; top: 3vh; left: -2.2vw;">
+            <!-- <div class="home-nav-vid-wrapper" style="z-index: 2px; position: absolute; top: 3vh; left: -2.2vw; border: 1px solid yellow; width: 100px; height: 200px;"> -->
               <div class="home-nav-vid">
-                <img src="pics/vhs-camera.gif" style="z-index: 1px; position: absolute; right: 0; top: 0; width: 60%; ">
-                <img src="pics/Rotating_earth_(large).gif" style="z-index: 0px;">
+                <img src="pics/vhs-camera.gif" style="z-index: 1px; position: absolute; right: 0; top: 0; width: 50%; ">
+                <img src="pics/Rotating_earth_(large).gif">
                 <button id="home-vid-text"
                   style="z-index: 2px; border: 0; padding: 0; background: none; font-weight: normal; font-family: myFirstFont; color: white; position: absolute; top: 44px; right: 33px; font-size: 0.9em;">MEDIA</button>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
 
           <div class="home-option-container" style="display: flex; height: calc(100% - 66px); position: relative;">
             <div class="home-options" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
+                <div id="top-row" style="flex: 1;"></div>
+              </div>
               <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
                 <div class="home-options-item"
                   style="flex: 1; display: flex; justify-content: center; align-items: center;">
