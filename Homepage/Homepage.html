@@ -156,6 +156,13 @@
       height: 80%;
     }
 
+    .center-tab-background {
+      background-image: url('pics/blue-border.gif');
+      background-size: 100% 100%;
+      height: 80%;
+      box-shadow: 0 0 8px 8px white inset;
+    }
+
     @media screen and (max-width: 1300px) {
       .home-nav-vid {
         width: 250px;
@@ -185,6 +192,10 @@
 
     /* orientation: portrait */
     @media screen and (max-width: 600px) {
+      .center-tab-background {
+        height: 100%;
+      }
+
       #background-stage {
         display: none;
       }
@@ -223,10 +234,6 @@
       #upper-row-free-col {
         display: none;
       }
-
-      /* .home-options-row {
-        top: 50;
-      } */
 
       #top-row {
         display: block;
@@ -418,97 +425,93 @@
 
 <body>
   <div class="body">
-    <img src="pics/stage-show.gif" class="background-screen" id="background-stage">
+    <img src="pics/stage-show.gif" class="background-screen" id="background-stage" style="z-index: -3;">
     <div class="body-wrapper">
-      <!-- <img src="pics/home-background-2.gif" class="background-screen"> -->
-      <img src="pics/blue-border.gif" class="background-screen">
+      <div class="center-tab-background">
+        <center>
+          <div class="home-center-tab">
 
-      <center>
-        <div class="home-center-tab">
-
-          <div class="home-nav"
-            style="z-index: px; background-color: #d4cdcd; border: 3px solid #979797; text-align: left; color: black; position: relative; top: -4px; border-radius: 4px; padding: 7px 0 7px 5%;">
-            <img src="pics/awge-header-logo.png" height="35px">
-          </div>
-
-          <div class="home-nav-vid-bar" style="position: relative; width: 0; height: 0; margin-left: 85%;">
-            <!-- <div class="home-nav-vid-wrapper" style="z-index: 2px; position: absolute; top: 3vh; left: -2.2vw; border: 1px solid yellow; width: 100px; height: 200px;"> -->
-            <!-- style="padding: 0px; background-image: url('pics/blue-border.gif'); background-size: cover; background-size: 100%; background-repeat: no-repeat;" -->
-            <div class="home-nav-vid">
-              <!-- <img src="pics/Blue-Square-No-Background.png"> -->
-              <!-- style="border: 10px solid transparent; padding: 10px; border-image-source: url(pics/Blue-Square-No-Background.png);" -->
-              <p id="vid"><img src="pics/Rotating_earth_(large).gif"></p>
-              <img src="pics/vhs-camera.gif" style="z-index: 1px; position: absolute; right: 0; top: 0; width: 50%;">
-              <button id="home-vid-text"
-                style="z-index: 2px; border: 0; padding: 0; background: none; font-weight: normal; font-family: myFirstFont; color: white; position: absolute; top: 44px; right: 33px; font-size: 0.9em;">MEDIA</button>
+            <div class="home-nav"
+              style="z-index: px; background-color: #d4cdcd; border: 3px solid #979797; text-align: left; color: black; position: relative; top: -4px; border-radius: 4px; padding: 7px 0 7px 5%;">
+              <img src="pics/awge-header-logo.png" height="35px">
             </div>
-            <!-- </div> -->
-          </div>
 
-          <div class="home-option-container" style="display: flex; height: calc(100% - 66px); position: relative;">
-            <div class="home-options" style="width: 100%; display: flex; flex-direction: column;">
-              <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
-                <div id="top-row" style="flex: 1;"></div>
+            <div class="home-nav-vid-bar" style="position: relative; width: 0; height: 0; margin-left: 85%;">
+              <!-- <div class="home-nav-vid-wrapper" style="z-index: 2px; position: absolute; top: 3vh; left: -2.2vw; border: 1px solid yellow; width: 100px; height: 200px;"> -->
+              <!-- style="padding: 0px; background-image: url('pics/blue-border.gif'); background-size: cover; background-size: 100%; background-repeat: no-repeat;" -->
+              <div class="home-nav-vid">
+                <p id="vid"><img src="pics/Rotating_earth_(large).gif"></p>
+                <img src="pics/vhs-camera.gif" style="z-index: 1px; position: absolute; right: 0; top: 0; width: 50%;">
+                <button id="home-vid-text"
+                  style="z-index: 2px; border: 0; padding: 0; background: none; font-weight: normal; font-family: myFirstFont; color: white; position: absolute; top: 44px; right: 33px; font-size: 0.9em;">MEDIA</button>
               </div>
-              <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
-                <div class="home-options-item"
-                  style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                  <a href="../shop/tstng.co/store.html">
-                    <button id="shop-button" style="border: 0; padding: 0; background: none;">
-                      <img class="home-options-icon" src="pics/awgeXmercedes_icon.gif"
-                        style="transform: scale(1.4) translateY(-5px);">
-                      <h3 class="home-options-text h3-iocns" style="color: #fe3824;">SHOP</h3>
+              <!-- </div> -->
+            </div>
+
+            <div class="home-option-container" style="display: flex; height: calc(100% - 66px); position: relative;">
+              <div class="home-options" style="width: 100%; display: flex; flex-direction: column;">
+                <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
+                  <div id="top-row" style="flex: 1;"></div>
+                </div>
+                <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
+                  <div class="home-options-item"
+                    style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                    <a href="../shop/tstng.co/store.html">
+                      <button id="shop-button" style="border: 0; padding: 0; background: none;">
+                        <img class="home-options-icon" src="pics/awgeXmercedes_icon.gif"
+                          style="transform: scale(1.4) translateY(-5px);">
+                        <h3 class="home-options-text h3-iocns" style="color: #fe3824;">SHOP</h3>
+                      </button>
+                    </a>
+                  </div>
+                  <div class="home-options-item">
+                    <button id="dvd-button">
+                      <img src="pics/rallyrace_icon.gif" class="home-options-icon" style="max-height: 8.5vh;">
+                      <h3 class="home-options-text h3-icons" style="color: #21201e; ">VIP</h3>
                     </button>
-                  </a>
+                  </div>
+                  <!-- <div style="flex: 1;"></div> -->
+                  <div id="upper-row-free-col" style="flex: 1;"></div>
                 </div>
-                <div class="home-options-item">
-                  <button id="dvd-button">
-                    <img src="pics/rallyrace_icon.gif" class="home-options-icon" style="max-height: 8.5vh;">
-                    <h3 class="home-options-text h3-icons" style="color: #21201e; ">VIP</h3>
-                  </button>
-                </div>
-                <!-- <div style="flex: 1;"></div> -->
-                <div id="upper-row-free-col" style="flex: 1;"></div>
-              </div>
-              <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
+                <div class="home-options-row" style="display: flex; flex: 1; position: relative;">
 
-                <div class="home-options-item"
-                  style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                  <button id="forums-button" style="border: 0; padding: 0; background: none;">
-                    <img class="home-options-icon" src="pics/awgeForum.gif">
-                    <h3 class="home-options-text h3-iocns" style="color: #eb6917;">FORUM</h3>
-                  </button>
-                </div>
-                <div class="home-options-item"
-                  style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                  <button id="about-button" style="border: 0; padding: 0; background: none;">
-                    <img class="home-options-icon" src="pics/question-block-red.gif">
-                    <h3 class="home-options-text h3-iocns" style="color: #fe3824;">ABOUT</h3>
-                  </button>
-                </div>
-                <div class="home-options-item"
-                  style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                  <button id="contact-button" style="border: 0; padding: 0; background: none;">
-                    <img class="home-options-icon" src="pics/pager.gif">
-                    <h3 class="home-options-text h3-iocns" style="color: #39620a;">CONTACT</h3>
-                  </button>
+                  <div class="home-options-item"
+                    style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                    <button id="forums-button" style="border: 0; padding: 0; background: none;">
+                      <img class="home-options-icon" src="pics/awgeForum.gif">
+                      <h3 class="home-options-text h3-iocns" style="color: #eb6917;">FORUM</h3>
+                    </button>
+                  </div>
+                  <div class="home-options-item"
+                    style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                    <button id="about-button" style="border: 0; padding: 0; background: none;">
+                      <img class="home-options-icon" src="pics/question-block-red.gif">
+                      <h3 class="home-options-text h3-iocns" style="color: #fe3824;">ABOUT</h3>
+                    </button>
+                  </div>
+                  <div class="home-options-item"
+                    style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                    <button id="contact-button" style="border: 0; padding: 0; background: none;">
+                      <img class="home-options-icon" src="pics/pager.gif">
+                      <h3 class="home-options-text h3-iocns" style="color: #39620a;">CONTACT</h3>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="copyright">
+              <h4 class="awge-copyright-text">©&nbsp;&nbsp;2022&nbsp;&nbsp;AWGE<br>
+                <span><button class="awge-copyright-text" style="cursor: pointer;">Terms and
+                    Conditions</button></span><br>
+                <span><button class="awge-copyright-text" style="cursor: pointer;">Privacy Policy</button></span><br>
+              </h4>
+
+            </div>
+
           </div>
-
-          <div class="copyright">
-            <h4 class="awge-copyright-text">©&nbsp;&nbsp;2022&nbsp;&nbsp;AWGE<br>
-              <span><button class="awge-copyright-text" style="cursor: pointer;">Terms and
-                  Conditions</button></span><br>
-              <span><button class="awge-copyright-text" style="cursor: pointer;">Privacy Policy</button></span><br>
-            </h4>
-
-          </div>
-
-        </div>
-      </center>
-
+        </center>
+      </div>
     </div>
   </div>
 
