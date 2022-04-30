@@ -113,7 +113,6 @@
       /* box-shadow: 3px 3px 10px rgb(0 0 0 / 46%); */
       transform: translateX(-50%) translateY(-50%);
       overflow: hidden;
-      min-height: 130px;
     }
 
     .home-center-tab {
@@ -147,7 +146,7 @@
     #vid {
       border: 10px solid transparent;
       border-image-source: url(pics/blue-border.gif);
-      border-image-slice: 100;
+      border-image-slice: 30;
       border-image-width: 10px;
     }
 
@@ -161,6 +160,16 @@
       background-size: 100% 100%;
       height: 80%;
       box-shadow: 0 0 8px 8px white inset;
+    }
+
+    #home-vid-text {
+      background: none;
+      font-family: myFirstFont;
+      color: white;
+      position: absolute;
+      top: 44px;
+      right: 33px;
+      font-size: 0.9em;
     }
 
     @media screen and (max-width: 1300px) {
@@ -212,10 +221,17 @@
         top: 105;
       }
 
-      .home-nav-vid {
+      #home-vid-text {
+        top: 22px;
+        font-size: 0.7em;
+      }
 
+      .home-nav-vid {
         width: 150px;
         height: 13vh;
+        position: relative;
+        top: 25px;
+        right: -20px;
       }
 
       .home-options-icon {
@@ -431,18 +447,17 @@
         <center>
           <div class="home-center-tab">
 
-            <div class="home-nav" style="background-color: #d4cdcd; border: 3px solid #979797; text-align: left; color: black; position: relative; top: -4px; border-radius: 4px; padding: 7px 0 7px 5%;">
+            <div class="home-nav"
+              style="background-color: #d4cdcd; border: 3px solid #979797; text-align: left; color: black; position: relative; top: -4px; border-radius: 4px; padding: 7px 0 7px 5%;">
               <img src="pics/awge-header-logo.png" height="35px">
             </div>
 
             <div class="home-nav-vid-bar" style="position: relative; width: 0; height: 0; margin-left: 85%;">
               <!-- <div class="home-nav-vid-wrapper" style="z-index: 2px; position: absolute; top: 3vh; left: -2.2vw; border: 1px solid yellow; width: 100px; height: 200px;"> -->
-              <!-- style="padding: 0px; background-image: url('pics/blue-border.gif'); background-size: cover; background-size: 100%; background-repeat: no-repeat;" -->
               <div class="home-nav-vid">
                 <p id="vid"><img src="pics/Rotating_earth_(large).gif"></p>
                 <img src="pics/vhs-camera.gif" style="z-index: 1px; position: absolute; right: 0; top: 0; width: 50%;">
-                <button id="home-vid-text"
-                  style="z-index: 2px; border: 0; padding: 0; background: none; font-weight: normal; font-family: myFirstFont; color: white; position: absolute; top: 44px; right: 33px; font-size: 0.9em;">MEDIA</button>
+                <button id="home-vid-text">MEDIA</button>
               </div>
               <!-- </div> -->
             </div>
